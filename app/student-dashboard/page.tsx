@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Settings, LogOut } from 'lucide-react'
 
 export default function StudentDashboardPage() {
@@ -53,7 +53,7 @@ export default function StudentDashboardPage() {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full" onClick={handleJoinExam}>Join Exam</Button>
+          <Button className="w-full bg-[#800020] hover:bg-[#600018]" onClick={handleJoinExam}>Join Exam</Button>
         </CardFooter>
       </Card>
     </div>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function LoginPage() {
@@ -59,7 +59,7 @@ export default function LoginPage() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full">Login as Proctor</Button>
+                  <Button type="submit" className="w-full bg-[#800020] hover:bg-[#600018]">Login as Proctor</Button>
                 </div>
               </form>
             </TabsContent>
@@ -87,7 +87,7 @@ export default function LoginPage() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full">Login as Student</Button>
+                  <Button type="submit" className="w-full bg-[#800020] hover:bg-[#600018]">Login as Student</Button>
                 </div>
               </form>
             </TabsContent>

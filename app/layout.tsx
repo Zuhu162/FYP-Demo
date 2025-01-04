@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ExamProvider } from './contexts/ExamContext'
+import { Header } from '@/components/ui/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Header />
         <ExamProvider>
           {children}
         </ExamProvider>

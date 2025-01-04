@@ -109,7 +109,7 @@ export default function CreateExamPage() {
                   required
                 />
               </div>
-              <Button type="submit">Next</Button>
+              <Button type="submit" className="bg-[#800020] hover:bg-[#600018]">Next</Button>
             </form>
           </CardContent>
         </Card>
@@ -133,7 +133,7 @@ export default function CreateExamPage() {
               <Label htmlFor="meeting-code">Meeting Code</Label>
               <Input id="meeting-code" value={meetingCode} readOnly />
             </div>
-            <Button onClick={handleCreateExam}>Create Exam</Button>
+            <Button onClick={handleCreateExam} className="bg-[#800020] hover:bg-[#600018]">Create Exam</Button>
           </CardContent>
         </Card>
       )}

@@ -42,7 +42,7 @@ export default function DashboardPage() {
           </CardContent>
           <CardFooter>
             <Link href="/dashboard/create-exam" passHref>
-              <Button className="w-full">
+              <Button className="w-full bg-[#800020] hover:bg-[#600018]">
                 <Plus className="mr-2 h-4 w-4" /> Create Exam
               </Button>
             </Link>
@@ -61,7 +61,7 @@ export default function DashboardPage() {
             />
           </CardContent>
           <CardFooter>
-            <Button className="w-full" disabled={!examCode}>
+            <Button className="w-full bg-[#800020] hover:bg-[#600018]" disabled={!examCode}>
               <LogIn className="mr-2 h-4 w-4" /> Join Exam
             </Button>
           </CardFooter>
