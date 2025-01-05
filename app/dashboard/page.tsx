@@ -1,22 +1,29 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Plus, LogIn, ClipboardList, Settings, LogOut } from 'lucide-react'
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Plus, LogIn, ClipboardList, Settings, LogOut } from "lucide-react";
 
 export default function DashboardPage() {
-  const [examCode, setExamCode] = useState('')
-  const router = useRouter()
+  const [examCode, setExamCode] = useState("");
+  const router = useRouter();
 
   const handleLogout = () => {
     // Here you would handle logout logic
-    router.push('/login')
-  }
+    router.push("/login");
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -61,7 +68,12 @@ export default function DashboardPage() {
             />
           </CardContent>
           <CardFooter>
-            <Button className="w-full bg-[#800020] hover:bg-[#600018]" disabled={!examCode}>
+            <Button
+              className="w-full bg-[#800020] hover:bg-[#600018]"
+              disabled={!examCode}
+              onClick={() =>
+                router.push(`/exam-session?code=${examCode}&role=proctor`)
+              }>
               <LogIn className="mr-2 h-4 w-4" /> Join Exam
             </Button>
           </CardFooter>
@@ -76,7 +88,9 @@ export default function DashboardPage() {
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="flex justify-between items-center mb-2">
                   <span>Exam {i + 1}</span>
-                  <Button variant="outline" size="sm">View Log</Button>
+                  <Button variant="outline" size="sm">
+                    View Log
+                  </Button>
                 </div>
               ))}
             </ScrollArea>
@@ -91,6 +105,5 @@ export default function DashboardPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
-
