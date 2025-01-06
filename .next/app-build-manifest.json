@@ -31,10 +31,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/exam-session/page.js"
     ],
-    "/dashboard/exam-logs/page": [
+    "/reports/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/exam-logs/page.js"
+      "static/chunks/app/reports/page.js"
     ],
     "/student-dashboard/page": [
       "static/chunks/webpack.js",

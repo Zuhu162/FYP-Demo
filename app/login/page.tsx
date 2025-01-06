@@ -41,6 +41,7 @@ export default function LoginPage() {
             priority
             className="mb-4"
           />
+          <CardTitle>UTM ExamGuard</CardTitle>
           <CardTitle>Login</CardTitle>
           <CardDescription>
             Enter your credentials to access the exam system.
